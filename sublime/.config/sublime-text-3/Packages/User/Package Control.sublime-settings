@@ -1,0 +1,29 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Anaconda",
+		"BracketHighlighter",
+		"Coffee2Js",
+		"CoffeeAngular Syntax",
+		"Dockerfile Syntax Highlighting",
+		"Gist",
+		"GitGutter",
+		"LaTeXTools",
+		"Markdown Extended",
+		"Markdown Preview",
+		"Monokai Extended",
+		"Package Control",
+		"Puppet",
+		"Python 3",
+		"requirementstxt",
+		"SideBarEnhancements",
+		"Theme - Soda",
+		"TrailingSpaces",
+		"VAlign",
+		"Zen Tabs"
+	]
+}

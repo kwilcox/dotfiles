@@ -1,0 +1,23 @@
+[user]
+    name = Kyle Wilcox
+    email = kyle@axiomdatascience.com
+
+[color]
+    ui = true
+
+[github]
+    user = kwilcox
+
+[log]
+    abbrevCommit = true
+
+[push]
+    default = simple
+
+[pull]
+    rebase = true
+
+[url "git@github.com:"]
+    insteadOf = "gh:"
+    pushInsteadOf = "gh:"
+    pushInsteadOf = "git://github.com/"

@@ -1,0 +1,2 @@
+#!/bin/sh
+/opt/google/chrome/google-chrome --disable-gpu-compositing

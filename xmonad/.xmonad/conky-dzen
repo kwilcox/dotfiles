@@ -1,0 +1,41 @@
+# conky config for dzen
+
+background yes
+out_to_console yes
+out_to_x no
+update_interval 2
+total_run_times 0
+use_spacer none
+
+
+TEXT
+^fg(green)\
+    CPU \
+^fg()\
+${cpubar cpu1 0,6}(^fg(pink)${cpu cpu1}%^fg()) \
+${cpubar cpu2 0,6}(^fg(pink)${cpu cpu2}%^fg()) \
+${cpubar cpu3 0,6}(^fg(pink)${cpu cpu3}%^fg()) \
+${cpubar cpu4 0,6}(^fg(pink)${cpu cpu4}%^fg()) \
+${cpubar cpu5 0,6}(^fg(pink)${cpu cpu5}%^fg()) \
+${cpubar cpu6 0,6}(^fg(pink)${cpu cpu6}%^fg()) \
+${cpubar cpu7 0,6}(^fg(pink)${cpu cpu7}%^fg()) \
+${cpubar cpu8 0,6}(^fg(pink)${cpu cpu8}%^fg()) \
+^fg(green)\
+    RAM \
+^fg()\
+${membar 0,6}(^fg(pink)${memperc}%^fg()) \
+^fg(green)\
+    SWAP \
+^fg()\
+${swapbar 0,6}(^fg(pink)${swapperc}%^fg()) \
+^fg(green)\
+    NET \
+^fg()\
+${downspeedf eth0} / ${upspeedf eth0} (^fg(pink)${addr eth0}^fg()) \
+^fg(green)\
+    DISK \
+^fg()\
+/(^fg(pink)${fs_used_perc /}%^fg()) \
+/data(^fg(pink)${fs_used_perc /data}%^fg()) \
+                               \
+^fg(white)${time %A %b %d %I:%M %p}

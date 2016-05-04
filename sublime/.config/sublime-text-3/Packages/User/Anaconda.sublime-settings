@@ -1,0 +1,14 @@
+{
+    "pep8_ignore":  [
+        "E501", "E221", "E203", "E201", "E124", "E202", "E241", "E251", "W293", "W291"
+    ],
+    "python_interpreter": "/usr/bin/python",
+    "anaconda_gutter_marks" : false,
+    "anaconda_linter_mark_style" : "outline",
+    "extra_paths":
+    [
+        "/opt/sublime_text"
+    ],
+    "enable_signatures_tooltip": true,
+    "merge_signatures_and_doc": true
+}

@@ -1,0 +1,19 @@
+channels:
+  - defaults
+  - ioos
+  - conda-forge
+  - axiom-data-science
+
+# Show channel URLs when displaying what is going to be downloaded and
+# in 'conda list'. The default is False.
+show_channel_urls: True
+
+# When using activate, change the command prompt ($PS1) to include the
+# activated environment. The default is True.
+changeps1: False
+
+create_default_packages:
+  - pip
+  - ipython
+
+binstar_upload: false

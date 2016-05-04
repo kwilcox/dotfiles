@@ -1,0 +1,20 @@
+alias ll='ls -lah --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias ping='ping -c 5'
+alias df='df -h'
+alias du='du -h'
+alias tf='tail -f'
+alias mkdir='mkdir -p'
+alias lines='wc -l'
+alias ports='netstat -tulanp'
+alias xterm='xterm -font -*-fixed-medium-r-*-*-13-*-*-*-*-*-iso8859-*'
+alias pyweb='python -m SimpleHTTPServer'
+alias devs="cd ~/Development && ls -a"
+alias downs="cd ~/Downloads && ls -a"
+alias diff="colordiff"
+alias scp='rsync -a -v -z -P'
+alias pt='py.test -s -rxs -v'
+alias tree='tree -CAFa -I "CVS|*.*.package|.svn|.git|.hg|node_modules|bower_components" --dirsfirst'
+alias fontupdate='sudo fc-cache -fv'
