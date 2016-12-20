@@ -134,24 +134,3 @@ bar {
   tray_output DVI-0
   font pango:Ubuntu Mono 10
 }
-
-## Set primary display
-exec xrandr --output DVI-0 --primary
-
-## Order correctly
-exec xrandr --output DVI-1 --right-of DVI-0
-
-## Desktop background color
-exec xsetroot -solid '#101010' &
-
-## Disable beeps
-exec xset -b &
-
-## DPMS monitor setting (standby->30 minutes, suspend->2 hours)
-exec xset dpms 1800 7200 &
-
-## OSD
-exec dunst &
-
-## Clipboard manager
-exec parcellite &

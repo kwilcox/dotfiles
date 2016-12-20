@@ -5,10 +5,13 @@ alias dockerkillall='docker kill $(docker ps -q)'
 alias dockercleanc='printf "\n>>> Deleting stopped containers\n\n" && docker rm $(docker ps -a -q)'
 # Delete all untagged images.
 alias dockercleani='printf "\n>>> Deleting untagged images\n\n" && docker rmi $(docker images -q -f dangling=true)'
+# Delete all dangling volumes
+alias dockercleanv='printf "\n>>> Deleting dangling volumes\n\n" && docker volume rm $(docker volume ls -q -f dangling=true)'
 
 dockerclean() {
     dockercleanc
     dockercleani
+    dockercleanv
 }
 
 dkb() {

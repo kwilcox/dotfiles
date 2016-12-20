@@ -23,7 +23,7 @@ mygit() {
 
 workgit() {
     git config --local user.name "Kyle Wilcox"
-    git config --local user.email "kyle@axiomalaska.com"
+    git config --local user.email "kyle@axiomdatascience.com"
     printgitconfig
 }
 
