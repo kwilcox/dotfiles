@@ -82,12 +82,12 @@ bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 
 # move focused container to screen
-bindsym $mod+F1 move container to output DVI-1
-bindsym $mod+F2 move container to output DVI-0
+#bindsym $mod+F1 move container to output HDMI-0
+#bindsym $mod+F2 move container to output DP-0
 
 # move workspace to screen
-bindsym $mod+Shift+F1 move workspace to output DVI-1
-bindsym $mod+Shift+F2 move workspace to output DVI-0
+#bindsym $mod+Shift+F1 move workspace to output HDMI-0
+#bindsym $mod+Shift+F2 move workspace to output DP-0
 
 # scratchpad
 bindsym $mod+m move scratchpad
@@ -103,10 +103,10 @@ mode "resize" {
   #bindsym uring resize grow width 10 px or 10 ppt
 
   # same bindings, but for the arrow keys
-  bindsym 113 resize shrink width 10 px or 10 ppt
-  bindsym 116 resize grow height 10 px or 10 ppt
-  bindsym 111 resize shrink height 10 px or 10 ppt
-  bindsym 114 resize grow width 10 px or 10 ppt
+  bindsym Left resize shrink width 10 px or 10 ppt
+  bindsym Up resize grow height 10 px or 10 ppt
+  bindsym Down resize shrink height 10 px or 10 ppt
+  bindsym Right resize grow width 10 px or 10 ppt
 
   # back to normal: Enter or Escape
   bindsym Return mode "default"
@@ -116,21 +116,34 @@ bindsym $mod+r mode "resize"
 
 # i3bar
 bar {
+  colors {
+    # Whole color settings
+    background #1e1e1e
+    statusline #ffffff
+    separator  #cf6a4c
+
+    # Type             border  background font
+    focused_workspace  #ffffff #9b703f #ffffff
+    active_workspace   #ffffff #888888 #ffffff
+    inactive_workspace #888888 #1e1e1e #A48E6D
+    urgent_workspace   #aa0000 #990000 #ffffff
+  }
   status_command i3status
   position top
-  mode dock
-  output DVI-0
-  tray_output DVI-0
-  tray_padding 0
-  font pango:Ubuntu Mono 10
-  strip_workspace_numbers no
-  binding_mode_indicator yes
+  font pango:Ubuntu Mono 12
+  separator_symbol "-|-"
 }
 
-bar {
-  position top
-  mode dock
-  output DVI-1
-  tray_output DVI-0
-  font pango:Ubuntu Mono 10
-}
+# Type                  border  background font
+client.focused          #9b703f #9b703f    #ffffff #FF0000
+client.focused_inactive #242424 #242424    #A48E6D #FD9D0D
+client.unfocused        #242424 #242424    #A48E6D #FD9D0D
+client.urgent           #ff8000 #ff8000    #ff0000 #900000
+
+#bar {
+#  position top
+#  mode dock
+#  output DP-0
+#  tray_output DP-0
+#  font pango:Ubuntu Mono 8
+#}

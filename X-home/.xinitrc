@@ -6,7 +6,7 @@ gsettings set org.gnome.desktop.interface scaling-factor 2
 xrandr --output DP-0 --primary
 
 # HDMI-0
-xrandr --output HDMI-0 --rotate right --left-of DP-0
+#xrandr --output HDMI-0 --rotate right --left-of DP-0
 
 # Desktop background color
 xsetroot -solid '#101010'
