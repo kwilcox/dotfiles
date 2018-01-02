@@ -13,7 +13,8 @@ bindsym $mod+Return exec i3-sensible-terminal
 # Kill focused window
 bindsym $mod+Shift+C kill
 
-bindsym $mod+p exec dmenu_run
+bindsym $mod+p exec rofi -show run
+bindsym $mod+w exec rofi -show window
 
 # reload/restart/exit
 bindsym $mod+Shift+Q reload
@@ -51,7 +52,7 @@ bindsym $mod+f fullscreen
 
 # change container layout (stacked, tabbed, default)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+y layout tabbed
 bindsym $mod+e layout default
 
 # toggle tiling / floating
@@ -82,12 +83,14 @@ bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 
 # move focused container to screen
-bindsym $mod+F1 move container to output DVI-1
-bindsym $mod+F2 move container to output DVI-0
+bindsym $mod+F1 move container to output DP-2
+bindsym $mod+F2 move container to output DP-0
+bindsym $mod+F3 move container to output DP-4
 
 # move workspace to screen
-bindsym $mod+Shift+F1 move workspace to output DVI-1
-bindsym $mod+Shift+F2 move workspace to output DVI-0
+bindsym $mod+Shift+F1 move workspace to output DP-2
+bindsym $mod+Shift+F2 move workspace to output DP-0
+bindsym $mod+Shift+F3 move workspace to output DP-4
 
 # scratchpad
 bindsym $mod+m move scratchpad
@@ -137,11 +140,13 @@ bar {
 }
 
 ## Set primary display
-exec xrandr --output DVI-1 --primary
+exec xrandr --output DP-0 --primary
 
 ## Order correctly
-exec xrandr --output DVI-0 --left-of DVI-1
-exec xrandr --output DVI-2 --right-of DVI-1
+exec xrandr --output DP-4 --rotate left
+exec xrandr --output DP-4 --right-of DP-0
+exec xrandr --output DP-2 --rotate right
+exec xrandr --output DP-2 --left-of DP-0
 
 ## Desktop background color
 exec xsetroot -solid '#101010' &
@@ -156,4 +161,4 @@ exec xset dpms 1800 7200 &
 exec dunst &
 
 ## Clipboard manager
-exec parcellite &
+#exec parcellite &
