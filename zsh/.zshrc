@@ -53,7 +53,21 @@ export DISABLE_VENV_CD=1
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autopep8 celery conda django docker docker-compose nmap tmux history pass python screen sudo mvn)
+plugins=(
+  git
+  autopep8
+  conda
+  docker
+  dotenv
+  docker-compose
+  nmap
+  tmux
+  history
+  pass
+  python
+  sudo
+  mvn
+)
 
 # User configuration
 
@@ -86,3 +100,5 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
