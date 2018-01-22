@@ -10,7 +10,7 @@ show_channel_urls: True
 
 # When using activate, change the command prompt ($PS1) to include the
 # activated environment. The default is True.
-changeps1: False
+changeps1: True
 
 create_default_packages:
   - pip
