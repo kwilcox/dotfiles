@@ -139,26 +139,20 @@ bar {
   font pango:Ubuntu Mono 10
 }
 
-## Set primary display
-exec xrandr --output DP-0 --primary
-
-## Order correctly
-exec xrandr --output DP-4 --rotate left
-exec xrandr --output DP-4 --right-of DP-0
-exec xrandr --output DP-2 --rotate right
-exec xrandr --output DP-2 --left-of DP-0
+## Setup displays
+exec xrandr_config.sh
 
 ## Desktop background color
-exec xsetroot -solid '#101010' &
+exec xsetroot -solid '#101010'
 
 ## Disable beeps
-exec xset -b &
+exec xset -b
 
 ## DPMS monitor setting (standby->30 minutes, suspend->2 hours)
-exec xset dpms 1800 7200 &
+exec xset dpms 1800 7200
 
 ## OSD
-exec dunst &
+#exec dunst &
 
 ## Clipboard manager
 #exec parcellite &
