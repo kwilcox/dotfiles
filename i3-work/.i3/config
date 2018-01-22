@@ -118,26 +118,26 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # i3bar
-bar {
-  status_command i3status
-  position top
-  mode dock
-  output DVI-1
-  tray_output DVI-1
-  tray_padding 0
-  font pango:Ubuntu Mono 10
-  strip_workspace_numbers no
-  binding_mode_indicator yes
-}
+#bar {
+#  status_command i3status
+#  position top
+#  mode dock
+#  output DVI-1
+#  tray_output DVI-1
+#  tray_padding 0
+#  font pango:Ubuntu Mono 10
+#  strip_workspace_numbers no
+#  binding_mode_indicator yes
+#}
 
-bar {
-  position top
-  mode dock
-  output DVI-1
-  tray_output DVI-0
-  tray_output DVI-2
-  font pango:Ubuntu Mono 10
-}
+#bar {
+#  position top
+#  mode dock
+#  output DVI-1
+#  tray_output DVI-0
+#  tray_output DVI-2
+#  font pango:Ubuntu Mono 10
+#}
 
 ## Setup displays
 exec xrandr_config.sh
