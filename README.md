@@ -12,7 +12,9 @@ Managed using [GNU Stow](http://www.gnu.org/software/stow/) with inspiration fro
 
 1. Fork
 2. Clone your fork to `~/dotfiles`
-3. Edit as needed
+3. `git submodule update`
+4. Install `stow`
+5. Edit configs as needed
 
 The `dotfiles` require that you already have `stow`, `pygmentize`, and `oh-my-zsh` installed. The `oh-my-zsh` theme requires Powerline fonts:
 
