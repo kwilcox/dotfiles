@@ -40,3 +40,12 @@ stow tmux
 ```
 
 That is probably all you want to do without customizing the other `dotfiles` for your own environment.
+
+## Rofi
+
+`stow rofi`
+`stow check`
+`cd ~/check`
+`firefox https://github.com/libcheck/check#installation`
+`cd ~/rofi`
+`firefox https://github.com/DaveDavenport/rofi/blob/next/INSTALL.md#install-a-checkout-from-git`

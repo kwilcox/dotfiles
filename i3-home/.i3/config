@@ -13,7 +13,8 @@ bindsym $mod+Return exec i3-sensible-terminal
 # Kill focused window
 bindsym $mod+Shift+C kill
 
-bindsym $mod+p exec dmenu_run
+bindsym $mod+p exec rofi -show run
+bindsym $mod+w exec rofi -show window
 
 # reload/restart/exit
 bindsym $mod+Shift+Q reload
@@ -51,7 +52,7 @@ bindsym $mod+f fullscreen
 
 # change container layout (stacked, tabbed, default)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+y layout tabbed
 bindsym $mod+e layout default
 
 # toggle tiling / floating
@@ -143,7 +144,7 @@ client.urgent           #ff8000 #ff8000    #ff0000 #900000
 # Gaps
 smart_gaps on
 smart_borders on
-gaps inner 10
+gaps inner 5
 gaps outer 5
 
 #bar {
