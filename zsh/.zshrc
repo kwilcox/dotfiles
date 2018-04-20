@@ -5,9 +5,41 @@ export ZSH=/home/kwilcox/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="tjkirch"
+
+BULLETTRAIN_PROMPT_ADD_NEWLINE=true
+BULLETTRAIN_DIR_EXTENDED=2
+CONDA_ENV_DISABLE_PROMPT=false
+BULLETTRAIN_CONTEXT_DEFAULT_USER=kwilcox
+BULLETTRAIN_CUSTOM_MSG="$(hostname)"
+BULLETTRAIN_PROMPT_ORDER=(
+  custom
+  status
+  #context
+  dir
+  screen
+  perl
+  ruby
+  nvm
+  aws
+  go
+  rust
+  elixir
+  virtualenv
+  conda
+  git
+  hg
+  cmd_exec_time
+)
+
+prompt_conda() {
+  local condaenv_path="$CONDA_PREFIX"
+  if [[ -n $condaenv_path && -n $CONDA_ENV_DISABLE_PROMPT ]]; then
+    prompt_segment $BULLETTRAIN_VIRTUALENV_BG $BULLETTRAIN_VIRTUALENV_FG $BULLETTRAIN_VIRTUALENV_PREFIX"  $(basename $CONDA_PREFIX)"
+  fi
+}
+
 ZSH_THEME="bullet-train"
-BULLETTRAIN_TIME_SHOW="false"
+
 export TERM="xterm-256color"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -102,3 +134,6 @@ export LANG=en_US.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# direnv: https://direnv.net/
+eval "$(direnv hook zsh)"

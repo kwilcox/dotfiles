@@ -4,13 +4,11 @@ channels:
   - kwilcox
   - defaults
 
-# Show channel URLs when displaying what is going to be downloaded and
-# in 'conda list'. The default is False.
-show_channel_urls: True
+show_channel_urls: true
 
 # When using activate, change the command prompt ($PS1) to include the
 # activated environment. The default is True.
-changeps1: True
+changeps1: false
 
 create_default_packages:
   - pip
