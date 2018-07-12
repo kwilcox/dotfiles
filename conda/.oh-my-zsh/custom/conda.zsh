@@ -1,5 +1,5 @@
 ac() {
-  export PATH="$HOME/miniconda3/bin:$PATH"
+  export PATH="/data/conda/miniconda/bin:$PATH"
 }
 sa() {
   ac
