@@ -7,3 +7,6 @@
 [submodule "check/check"]
 	path = check/check
 	url = https://github.com/libcheck/check.git
+[submodule "polybar/polybar"]
+	path = polybar/polybar
+	url = https://github.com/jaagr/polybar.git

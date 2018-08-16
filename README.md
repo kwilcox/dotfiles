@@ -49,3 +49,21 @@ That is probably all you want to do without customizing the other `dotfiles` for
 `firefox https://github.com/libcheck/check#installation`
 `cd ~/rofi`
 `firefox https://github.com/DaveDavenport/rofi/blob/next/INSTALL.md#install-a-checkout-from-git`
+
+## Polybar
+
+Requires:
+
+* https://github.com/acrisci/playerctl
+
+`cd polybar/polybar`
+`git submodule init`
+`git submodule update`
+`cd ..`
+`cd ..`
+`git stow polybar`
+`cd ~/polybar`
+`mkdir build`
+`cd build`
+`cmake ..`
+`sudo make install`
