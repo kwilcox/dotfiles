@@ -62,7 +62,7 @@ cursor-scroll = ns-resize
 
 [bar/center]
 inherit = base
-monitor = ${env:MONITOR:DP-4}
+monitor = ${env:MONITOR_CENTER:DP-4}
 
 i3-pin = true
 ;wm-restack = i3
@@ -74,7 +74,7 @@ modules-right = vpn filesystem memory cpu eth powermenu
 
 [bar/left]
 inherit = base
-monitor = DP-0
+monitor = ${env:MONITOR_LEFT:DP-0}
 height = 20
 
 modules-left = i3
@@ -86,7 +86,7 @@ i3-pin = true
 
 [bar/right]
 inherit = base
-monitor = DP-2
+monitor = ${env:MONITOR_RIGHT:DP-2}
 height = 20
 
 i3-pin = true

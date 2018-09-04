@@ -1,6 +1,8 @@
 # Windows key
 set $mod Mod4
 
+exec --no-startup-id ~/bin/polybar.sh &
+
 # Unicode font
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 
@@ -115,26 +117,6 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# i3bar
-bar {
-  colors {
-    # Whole color settings
-    background #1e1e1e
-    statusline #ffffff
-    separator  #cf6a4c
-
-    # Type             border  background font
-    focused_workspace  #ffffff #9b703f #ffffff
-    active_workspace   #ffffff #888888 #ffffff
-    inactive_workspace #888888 #1e1e1e #A48E6D
-    urgent_workspace   #aa0000 #990000 #ffffff
-  }
-  status_command i3status
-  position top
-  font pango:Ubuntu Mono 12
-  separator_symbol "-|-"
-}
-
 # Type                  border  background font
 client.focused          #9b703f #9b703f    #ffffff #FF0000
 client.focused_inactive #242424 #242424    #A48E6D #FD9D0D
@@ -147,10 +129,3 @@ smart_borders on
 gaps inner 5
 gaps outer 5
 
-#bar {
-#  position top
-#  mode dock
-#  output DP-0
-#  tray_output DP-0
-#  font pango:Ubuntu Mono 8
-#}
