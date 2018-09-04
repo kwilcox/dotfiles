@@ -16,15 +16,15 @@ BULLETTRAIN_PROMPT_ORDER=(
   status
   #context
   dir
-  screen
-  perl
+  #screen
+  #perl
   ruby
-  nvm
+  #nvm
   aws
-  go
-  rust
-  elixir
-  virtualenv
+  #go
+  #rust
+  #elixir
+  #virtualenv
   conda
   git
   hg
@@ -100,6 +100,13 @@ plugins=(
   sudo
   mvn
 )
+
+# Automatically start tmux
+ZSH_TMUX_AUTOSTART=true
+# Automatically connect to a previous session if it exists
+ZSH_TMUX_AUTOCONNECT=false
+# Automatically close the terminal when tmux exits
+ZSH_TMUX_AUTOQUIT=false
 
 # User configuration
 
