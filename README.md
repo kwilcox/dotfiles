@@ -67,3 +67,19 @@ Requires:
 `cd build`
 `cmake ..`
 `sudo make install`
+
+
+## tmux
+
+Uses [tpm](https://github.com/tmux-plugins/tpm) for plugin management
+
+Install: `prefix + I`
+Update: `prefix + U`
+
+
+## nvim
+
+Uses [vim-plug](https://github.com/junegunn/vim-plug) for plugin management
+
+Install: `:PlugInstall`
+Update: `:PlugUpdate`
