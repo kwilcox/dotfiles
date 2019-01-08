@@ -72,6 +72,10 @@ modules-left = i3 xwindow
 modules-center = date spotify pulseaudio
 modules-right = vpn filesystem memory cpu eth powermenu
 
+tray-position = center
+tray-padding = 5
+tray-offset-x = 650
+
 [bar/left]
 inherit = base
 monitor = ${env:MONITOR_LEFT:DP-0}
