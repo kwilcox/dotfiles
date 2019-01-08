@@ -7,7 +7,7 @@
 <plist version="1.0">
 <dict>
 	<key>author</key>
-	<string>github.com&#x2f;kwilcox</string>
+	<string>github.com/kwilcox</string>
 	<key>colorSpaceName</key>
 	<string>sRGB</string>
 	<key>gutterSettings</key>
@@ -24,7 +24,7 @@
 		<string>#a6e22e</string>
 	</dict>
 	<key>name</key>
-	<string>Monokai Extended - kwilcox</string>
+	<string>kwilcox - Monokai Extended</string>
 	<key>semanticClass</key>
 	<string>theme.dark.monokai_extended</string>
 	<key>settings</key>

@@ -5,7 +5,9 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
 		"Anaconda",
+		"Babel",
 		"BracketHighlighter",
 		"Coffee2Js",
 		"CoffeeAngular Syntax",
@@ -18,6 +20,8 @@
 		"Markdown Extended",
 		"MarkdownPreview",
 		"Monokai Extended",
+		"Monokai++",
+		"nginx",
 		"Package Control",
 		"Pug",
 		"Puppet",
@@ -25,7 +29,9 @@
 		"requirementstxt",
 		"Sass",
 		"SideBarEnhancements",
+		"Theme - Monokai+",
 		"Theme - Soda",
+		"Theme - SoDaReloaded",
 		"TOML",
 		"TrailingSpaces",
 		"VAlign",

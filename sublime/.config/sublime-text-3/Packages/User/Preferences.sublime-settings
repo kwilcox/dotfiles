@@ -1,7 +1,7 @@
 {
 	"bold_folder_labels": true,
 	"caret_style": "solid",
-	"color_scheme": "Packages/KWilcoxStyle/Monokai Extended - kwilcox.tmTheme",
+	"color_scheme": "Packages/KWilcoxStyle/kwilcox - Monokai Extended Origin.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
 	[
@@ -9,7 +9,9 @@
 		".git",
 		".hg",
 		"CVS",
-		"__pycache__"
+		"__pycache__",
+		".pytest_cache",
+		"*.egg-info"
 	],
 	"font_face": "MesloLGS Nerd Font Mono",
 	"font_options":
