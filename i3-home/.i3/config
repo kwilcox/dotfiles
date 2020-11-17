@@ -1,7 +1,7 @@
 # Windows key
 set $mod Mod4
 
-exec --no-startup-id ~/bin/polybar.sh &
+exec --no-startup-id ~/bin/polybar.sh
 
 # Unicode font
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
