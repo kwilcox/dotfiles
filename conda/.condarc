@@ -1,7 +1,7 @@
 channels:
   - conda-forge
   - axiom-data-science
-  - kwilcox
+#  - kwilcox
   - defaults
 
 show_channel_urls: true
@@ -12,6 +12,7 @@ changeps1: false
 
 create_default_packages:
   - pip
-  - ipython
+#  - ipython
 
 binstar_upload: false
+#channel_priority: strict

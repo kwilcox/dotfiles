@@ -1,10 +1,10 @@
-ac() {
-  export PATH="/data/conda/miniconda/bin:$PATH"
-}
+#!/bin/bash
+. /data/conda/miniconda/etc/profile.d/conda.sh
+conda activate
+
 sa() {
-  ac
-  source activate $1
+  conda activate $1
 }
 sd() {
-  source deactivate
+  conda deactivate
 }

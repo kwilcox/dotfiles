@@ -19,7 +19,7 @@ BULLETTRAIN_PROMPT_ORDER=(
   #screen
   #perl
   ruby
-  #nvm
+  nvm
   aws
   #go
   #rust
@@ -86,9 +86,9 @@ export DISABLE_VENV_CD=1
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  conda
   git
   autopep8
-  conda
   docker
   dotenv
   docker-compose
@@ -99,6 +99,7 @@ plugins=(
   python
   sudo
   mvn
+  zsh-nvm
 )
 
 # Automatically start tmux
@@ -144,3 +145,8 @@ export LANG=en_US.UTF-8
 
 # direnv: https://direnv.net/
 eval "$(direnv hook zsh)"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+GPG_TTY=$(tty)
+export GPG_TTY

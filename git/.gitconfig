@@ -3,7 +3,7 @@
     email = kyle@axiomdatascience.com
 
 [credential]
-    helper = cache
+	helper = cache
 
 [color]
     ui = auto

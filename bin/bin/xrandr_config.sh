@@ -9,4 +9,4 @@ xrandr --output DP-0 --left-of DP-4
 xrandr --output DP-2 --right-of DP-4
 
 # Home 8930 (octo)
-xrandr --output DP-0 --primary
+#xrandr --output DP-0 --primary
