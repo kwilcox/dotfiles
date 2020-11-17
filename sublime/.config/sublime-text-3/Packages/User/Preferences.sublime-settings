@@ -1,8 +1,39 @@
 {
+	"binary_file_patterns":
+	[
+		"*.nc",
+		"*.nc4",
+		"*.hdf",
+		"*.hdf5"
+	],
 	"bold_folder_labels": true,
 	"caret_style": "solid",
 	"color_scheme": "Packages/KWilcoxStyle/kwilcox - Monokai Extended Origin.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.sublime-workspace",
+		"*.retry"
+	],
 	"folder_exclude_patterns":
 	[
 		".svn",
@@ -11,8 +42,6 @@
 		"CVS",
 		"__pycache__",
 		".pytest_cache",
-		"*.egg-info"
-	],
 		"*.egg-info",
 		"node_modules"
 	],
@@ -22,6 +51,8 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"Markdown",
+		"Python",
 		"Vintage"
 	],
 	"indent_guide_options":
