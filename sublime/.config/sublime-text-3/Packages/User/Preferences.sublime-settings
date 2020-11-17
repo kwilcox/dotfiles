@@ -13,12 +13,11 @@
 		".pytest_cache",
 		"*.egg-info"
 	],
-	"font_face": "MesloLGS Nerd Font Mono",
-	"font_options":
-	[
-		"subpixel_antialias"
+		"*.egg-info",
+		"node_modules"
 	],
-	"font_size": 9,
+	"font_face": "JetBrains Mono",
+	"font_size": 10,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
