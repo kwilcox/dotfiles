@@ -62,7 +62,7 @@ cursor-scroll = ns-resize
 
 [bar/center]
 inherit = base
-monitor = ${env:MONITOR_CENTER:DP-4}
+monitor = ${env:MONITOR_CENTER:DP-3}
 
 i3-pin = true
 ;wm-restack = i3
@@ -74,7 +74,7 @@ modules-right = date vpn filesystem memory cpu eth powermenu
 
 [bar/left]
 inherit = base
-monitor = ${env:MONITOR_LEFT:DP-0}
+monitor = ${env:MONITOR_LEFT:DP-3}
 height = 20
 
 modules-left = i3
@@ -91,7 +91,7 @@ tray-offset-x = 0
 
 [bar/right]
 inherit = base
-monitor = ${env:MONITOR_RIGHT:DP-2}
+monitor = ${env:MONITOR_RIGHT:DP-3}
 height = 20
 
 i3-pin = true
@@ -327,7 +327,7 @@ date = " %Y-%m-%d"
 time = %H:%M:%S
 ;time-alt = %H:%M:%S
 
-format-prefix = 📅
+#format-prefix = 📅
 format-prefix-font = 2
 format-prefix-foreground = #fff
 format-underline = #0a6cf5
@@ -339,11 +339,13 @@ label = %{T-}%date% %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume = "%{T2}🔊 %{T-}%percentage%%"
+#label-volume = "%{T2}🔊 %{T-}%percentage%%"
+label-volume = "%{T2} %{T-}%percentage%%"
 label-volume-foreground = ${root.foreground}
 
 label-muted-foreground = #fff
-label-muted = "%{T2}🔇 %{T-}muted"
+#label-muted = "%{T2}🔇 %{T-}muted"
+label-muted = "%{T2} %{T-}muted"
 
 bar-volume-width = 20
 bar-volume-foreground-0 = #55aa55
@@ -367,7 +369,8 @@ label-volume = VOL
 label-volume-foreground = ${root.foreground}
 
 format-muted-foreground = #fff
-label-muted = "%{T2}🔇%{T-}muted"
+#label-muted = "%{T2}🔇%{T-}muted"
+label-muted = "%{T2}%{T-}muted"
 
 bar-volume-width = 20
 bar-volume-foreground-0 = #55aa55
@@ -442,7 +445,8 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = 🔘
+#label-open = 🔘
+label-open = menu
 label-open-foreground = ${colors.secondary}
 label-close = "%{T2}╳ %{T-}cancel"
 label-close-foreground = ${colors.secondary}

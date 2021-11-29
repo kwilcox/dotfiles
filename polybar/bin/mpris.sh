@@ -20,7 +20,8 @@ fi
 if [[ $player_status = "Playing" ]]; then
     echo "%{B$sc}%{F$ac}%{u$uc +u}  $metadata "
 elif [[ $player_status = "Paused" ]]; then
-    echo "%{F$gc}%{u$sc +u} ⏸ $metadata "
+    #echo "%{F$gc}%{u$sc +u} ⏸ $metadata "
+    echo "%{F$gc}%{u$sc +u} paused $metadata "
 else
     echo "%{F$gc}$icon"
 fi

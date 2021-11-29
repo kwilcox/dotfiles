@@ -86,9 +86,9 @@ export DISABLE_VENV_CD=1
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  conda
   git
   autopep8
+  #conda
   docker
   dotenv
   docker-compose

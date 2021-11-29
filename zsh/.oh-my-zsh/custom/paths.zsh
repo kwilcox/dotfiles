@@ -1,6 +1,7 @@
 #!/bin/bash
 export PATH="/home/kwilcox/bin:$PATH"
 export PATH="/opt/sublime_text:$PATH"
+export PATH="/data/conda/miniconda/bin:$PATH"
 export PATH="/home/kwilcox/go/bin:$PATH"
 export PATH="/opt/idea/idea/bin:$PATH"
 

@@ -1,7 +1,12 @@
 # Windows key
 set $mod Mod4
 
-exec --no-startup-id ~/bin/polybar.sh
+exec --no-startup-id xrandr_config.sh  # Setup displays
+exec --no-startup-id xsetroot -solid '#101010'  # Desktop background color
+exec --no-startup-id xset -b  # Disable beeps
+exec --no-startup-id xset xset dpms 1800 7200  # DPMS monitor setting (standby->30 minutes, suspend->2 hours)
+exec --no-startup-id unity-settings-daemon
+exec_always --no-startup-id ~/bin/polybar.sh &
 
 # Unicode font
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -86,11 +91,11 @@ bindsym $mod+Shift+6 move container to workspace 6
 
 # move focused container to screen
 #bindsym $mod+F1 move container to output HDMI-0
-#bindsym $mod+F2 move container to output DP-0
+#bindsym $mod+F2 move container to output DP-3
 
 # move workspace to screen
 #bindsym $mod+Shift+F1 move workspace to output HDMI-0
-#bindsym $mod+Shift+F2 move workspace to output DP-0
+#bindsym $mod+Shift+F2 move workspace to output DP-3
 
 # scratchpad
 bindsym $mod+m move scratchpad

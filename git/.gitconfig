@@ -2,9 +2,6 @@
     name = Kyle Wilcox
     email = kyle@axiomdatascience.com
 
-[credential]
-	helper = cache
-
 [color]
     ui = auto
 
@@ -32,3 +29,6 @@
     insteadOf = "gh:"
     pushInsteadOf = "gh:"
     pushInsteadOf = "git://github.com/"
+
+[credential]
+	helper = store

@@ -1,6 +1,6 @@
 {
     "pep8_ignore":  [
-        "E501", "E221", "E203", "E201", "E124", "E202", "E241", "E251", "W293", "W291"
+        "E501", "E221", "E203", "E201", "E124", "E202", "E241", "E251", "W293", "W291", "W504"
     ],
     "python_interpreter": "/data/conda/miniconda3-py37/bin/python",
     "anaconda_gutter_marks" : false,
