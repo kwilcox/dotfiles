@@ -1,9 +1,0 @@
-[
-    { "keys": ["ctrl+shift+d"], "command": "delete_trailing_spaces" },
-    { "keys": ["ctrl+\\"],      "command": "valign" },
-    { "keys": ["alt+m"],        "command": "markdown_preview" },
-    { "keys": ["ctrl+alt+r"],   "command": "anaconda_goto" },
-    { "keys": ["ctrl+alt+f"],   "command": "anaconda_find_usages" },
-    { "keys": ["ctrl+alt+d"],   "command": "anaconda_doc" },
-    { "keys": ["ctrl+shift+t"], "command": "toggle_trailing_spaces" },
-]
