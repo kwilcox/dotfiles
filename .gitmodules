@@ -4,9 +4,3 @@
 [submodule "rofi/rofi"]
 	path = rofi/rofi
 	url = https://github.com/DaveDavenport/rofi.git
-[submodule "check/check"]
-	path = check/check
-	url = https://github.com/libcheck/check.git
-[submodule "polybar/polybar"]
-	path = polybar/polybar
-	url = https://github.com/jaagr/polybar.git
