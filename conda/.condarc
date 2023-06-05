@@ -2,3 +2,5 @@ channels:
   - conda-forge
   - axiom-data-science
   - defaults
+
+changeps1: false

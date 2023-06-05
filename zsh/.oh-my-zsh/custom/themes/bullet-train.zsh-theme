@@ -558,7 +558,7 @@ prompt_kctx() {
   if command -v kubectl > /dev/null 2>&1; then
     if [[ -f $BULLETTRAIN_KCTX_KCONFIG ]]; then
       prompt_segment $BULLETTRAIN_KCTX_BG $BULLETTRAIN_KCTX_FG $BULLETTRAIN_KCTX_PREFIX" $(cat $BULLETTRAIN_KCTX_KCONFIG|grep current-context| awk '{print $2}')"
-    fi  
+    fi
   fi
 }
 

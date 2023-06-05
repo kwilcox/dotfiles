@@ -11,6 +11,7 @@ BULLETTRAIN_DIR_EXTENDED=2
 CONDA_ENV_DISABLE_PROMPT=false
 BULLETTRAIN_CONTEXT_DEFAULT_USER=kwilcox
 BULLETTRAIN_CUSTOM_MSG="$(hostname)"
+BULLETTRAIN_PROMPT_CHAR=" \uE0B0"
 BULLETTRAIN_PROMPT_ORDER=(
   custom
   status
@@ -20,7 +21,7 @@ BULLETTRAIN_PROMPT_ORDER=(
   #perl
   #ruby
   nvm
-  aws
+  #aws
   #go
   #rust
   #elixir
