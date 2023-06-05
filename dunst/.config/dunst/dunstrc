@@ -1,0 +1,71 @@
+[global]
+    frame_width = 4
+    frame_color = "#282a36"
+    separator_color = frame
+    font = Jetbrains Mono 10
+    markup = full
+    format = "%s %p\n%b"
+    sort = yes
+    indicate_hidden = yes
+    alignment = left
+    bounce_freq = 5
+    show_age_threshold = 60
+    word_wrap = no
+    ignore_newline = no
+
+    # Size
+    shrink = no
+    geometry = "400x200-1000+1200"
+    # width = 400
+    # height = 200
+    # origin = top-center
+    # offset = 200x200
+
+    transparency = 40
+    idle_threshold = 120
+    monitor = 0
+    follow = keyboard
+    sticky_history = yes
+    history_length = 20
+    show_indicators = yes
+    line_height = 0
+    padding = 4
+    # corner_radius = 0
+    horizontal_padding = 10
+    separator_color = "#ffb86c"
+    separator_height = 2
+    startup_notification = false
+    dmenu = rofi -dmenu -p dunst
+    browser = /usr/bin/google-chrome
+    icon_position = left
+    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    min_icon_size = 0
+    max_icon_size = 64
+
+    title = Dunst
+    class = Dunst
+
+    # Progress Bar
+    progress_bar = true
+    progress_bar_height = 10
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+
+[urgency_low]
+    foreground = "#6272a4"
+    background = "#282a36"
+    frame_color = "#282a36"
+    timeout = 10
+
+[urgency_normal]
+    foreground = "#bd93f9"
+    background = "#f1fa8c"
+    frame_color = "#f1fa8c"
+    timeout = 20
+
+[urgency_critical]
+    foreground = "#f8f8f2"
+    background = "#ff5555"
+    frame_color = "#ff5555"
+    timeout = 0

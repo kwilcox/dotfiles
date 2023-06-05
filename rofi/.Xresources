@@ -1,9 +1,0 @@
-rofi.background: #333
-rofi.foreground: #888
-rofi.highlightbg: #eb709b
-rofi.highlightfg: #fff
-rofi.bordercolor: #444
-rofi.font: terminus 12
-rofi.padding: 3
-rofi.lines: 5
-rofi.borderwidth: 3
