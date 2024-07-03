@@ -1,0 +1,3 @@
+#!/bin/bash
+
+flameshot gui -d 1 -c --last-region

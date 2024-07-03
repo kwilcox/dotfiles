@@ -141,6 +141,7 @@ bindsym $mod+F8 exec playerctl next
 
 # Screenshots
 bindsym Print exec "flameshot gui"
+bindsym $mod+Home exec "gohan"
 
 # Window specifics
 for_window [class="Slack"] border pixel 8
