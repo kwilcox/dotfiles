@@ -1,85 +1,125 @@
-## dotfiles
+# dotfiles
 
-Managed using [GNU Stow](http://www.gnu.org/software/stow/) with inspiration from [xero's dotfiles](https://github.com/xero/dotfiles).
+Managed using [GNU Stow](http://www.gnu.org/software/stow/) with original inspiration from [xero's dotfiles](https://github.com/xero/dotfiles).
 
-#### Things
+## Includes
 
-1. powerline fonts
-2. zsh completion for `conda`
-3. zsh theme showing which `conda env` you are on
+1. fonts
+2. terminal (zsh/tmux)
+3. rofi (launcher)
+4. dunst (notifications)
+5. i3 (wm)
 
-#### Installation
+## Installation
 
-1. Fork
-2. Clone your fork to `~/dotfiles`
-3. `git submodule update`
-4. Install `stow`
-5. Edit configs as needed
+1. Clone
 
-The `dotfiles` require that you already have `stow`, `pygmentize`, and `oh-my-zsh` installed. The `oh-my-zsh` theme requires Powerline fonts:
+    ```shell
+    git clone https://github.com/kwilcox/dotfiles.git ~/.dotfiles
+    cd ~/.dotfiles
+    ```
 
-```
-cd ~/dotfiles
+1. Update submodules
+
+    ```shell
+    git submodule update
+    ```
+
+1. Install `stow` and `pygmentize`
+
+    ```shell
+    # Check your package manager for the correct package name
+    [apt|yum|dnf|brew] install stow pygmentize
+    ```
+
+1. Install specific dotfile features
+
+    ```shell
+    stow [feature]
+    ```
+
+## Features
+
+### fonts
+
+Most other configurations rely on some of the fonts in this folder. Install them first!
+
+```shell
 stow fonts
-sudo fc-cache -fv
+sudo fc-cache -f -v
 ```
 
-The `zsh` config requires that the `conda` plugin for `zsh` is installed:
+### dunst
 
-```
-cd ~/dotfiles
-stow conda
+Theme was made to match the `rofi` theme. By default the notifications appear on the second monitor,
+which is a [little thing](https://www.amazon.com/Eyoyo-1920x1080-Computer-Security-Surveillance/dp/B075CGZJLJ/)
+that I run under my main monitor. Tested well with Slack, Spotify, Gmail/Calendar, Discord, Signal.
+
+```shell
+stow dunst
 ```
 
-Then go ahead and get crazy:
+![dunst](./dunst/sample.png)
 
+### rofi
+
+Theme is based on Dracula and modified to pop a bit more and match the `i3` theme.
+
+```shell
+stow rofi
 ```
-cd ~/dotfiles
-stow zsh
+
+![rofi](./rofi/sample.png)
+
+### tmux
+
+Uses [tpm](https://github.com/tmux-plugins/tpm) for plugin management and is configured so
+mouse-based and yank-based copying works interchangeably with the system clipboard using [`xsel`](https://github.com/kfish/xsel).
+
+```shell
 stow tmux
 ```
 
-That is probably all you want to do without customizing the other `dotfiles` for your own environment.
+Install plugins: `prefix + I`
 
-## Rofi
+Update plugins: `prefix + U`
 
-`stow rofi`
-`stow check`
-`cd ~/check`
-`firefox https://github.com/libcheck/check#installation`
-`cd ~/rofi`
-`firefox https://github.com/DaveDavenport/rofi/blob/next/INSTALL.md#install-a-checkout-from-git`
+![tmux](./tmux/sample.png)
 
-## Polybar
+### fzf
 
-Requires:
+Requires [`fzf`](https://github.com/junegunn/fzf).
 
-* https://github.com/acrisci/playerctl
+```shell
+stow fzf
+```
 
-`cd polybar/polybar`
-`git submodule init`
-`git submodule update`
-`cd ..`
-`cd ..`
-`git stow polybar`
-`cd ~/polybar`
-`mkdir build`
-`cd build`
-`cmake ..`
-`sudo make install`
+#### File browsing/preview (`ctrl+t`)
 
+![files](./fzf/files.png)
 
-## tmux
+#### Command browsing (`ctrl+r`)
 
-Uses [tpm](https://github.com/tmux-plugins/tpm) for plugin management
+![search](./fzf/search.png)
 
-Install: `prefix + I`
-Update: `prefix + U`
+### nvim
 
+Uses [vim-plug](https://github.com/junegunn/vim-plug) for plugin management. I have migrated to
+using `vscode` for my daily coding and this config is a little out of date.
 
-## nvim
+```shell
+stow vim
+```
 
-Uses [vim-plug](https://github.com/junegunn/vim-plug) for plugin management
+Install plugins: `:PlugInstall`
 
-Install: `:PlugInstall`
-Update: `:PlugUpdate`
+Update plugins: `:PlugUpdate`
+
+### ssh
+
+Uses a config folder at `~/.ssh/config.d` that is included in the main `~/.ssh/config` file. Add
+additional SSH config files to this folder and they will be included in the main config file.
+
+```shell
+stow ssh
+```
