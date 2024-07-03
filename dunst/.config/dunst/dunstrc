@@ -1,8 +1,7 @@
 [global]
-    frame_width = 4
+    frame_width = 2
     frame_color = "#282a36"
-    separator_color = frame
-    font = Jetbrains Mono 10
+    font = Jetbrains Mono 24
     markup = full
     format = "%s %p\n%b"
     sort = yes
@@ -10,29 +9,29 @@
     alignment = left
     bounce_freq = 5
     show_age_threshold = 60
-    word_wrap = no
+    word_wrap = yes
     ignore_newline = no
 
     # Size
     shrink = no
-    geometry = "400x200-1000+1200"
+    # geometry = "400x200-1000+1200"
     # width = 400
     # height = 200
     # origin = top-center
     # offset = 200x200
 
-    transparency = 40
+    # transparency = 40
     idle_threshold = 120
-    monitor = 0
-    follow = keyboard
+    monitor = 1
+    follow = none
     sticky_history = yes
     history_length = 20
     show_indicators = yes
     line_height = 0
-    padding = 4
+    padding = 20
     # corner_radius = 0
-    horizontal_padding = 10
-    separator_color = "#ffb86c"
+    horizontal_padding = 20
+    separator_color = "#282a36"
     separator_height = 2
     startup_notification = false
     dmenu = rofi -dmenu -p dunst
@@ -40,7 +39,7 @@
     icon_position = left
     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
     min_icon_size = 0
-    max_icon_size = 64
+    max_icon_size = 128
 
     title = Dunst
     class = Dunst
@@ -52,20 +51,30 @@
     progress_bar_min_width = 150
     progress_bar_max_width = 300
 
+[experimental]
+    # Calculate the dpi to use on a per-monitor basis.
+    # If this setting is enabled the Xft.dpi value will be ignored and instead
+    # dunst will attempt to calculate an appropriate dpi value for each monitor
+    # using the resolution and physical size. This might be useful in setups
+    # where there are multiple screens with very different dpi values.
+
+    # LOOK: This breaks dunst on the 49" UW so only enable when using on the small screen
+    per_monitor_dpi = true
+
 [urgency_low]
-    foreground = "#6272a4"
-    background = "#282a36"
-    frame_color = "#282a36"
+    foreground = "#aaaaaa"
+    background = "#282a3600"
+    frame_color = "#aaeeee"
     timeout = 10
 
 [urgency_normal]
     foreground = "#bd93f9"
-    background = "#f1fa8c"
+    background = "#f1fa8c00"
     frame_color = "#f1fa8c"
     timeout = 20
 
 [urgency_critical]
     foreground = "#f8f8f2"
-    background = "#ff5555"
+    background = "#ff555500"
     frame_color = "#ff5555"
     timeout = 0

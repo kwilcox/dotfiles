@@ -144,14 +144,14 @@ bindsym Print exec "flameshot gui"
 bindsym $mod+Home exec "gohan"
 
 # Window specifics
-for_window [class="Slack"] border pixel 8
+# for_window [class="Slack"] border pixel 8
 # for_window [class="Slack"] sticky enable
 
 for_window [class="Org.gnome.Nautilus"] floating enable, border pixel 8
 
 # Workspace destinations
 # Spotify can't use "assign", see i3 docs
-for_window [class="Signal"] move to workspace 7
+for_window [class="Signal"] move to workspace 8
 for_window [class="Spotify"] move to workspace 8
 
 # Gaps
@@ -161,4 +161,3 @@ gaps inner 6
 gaps outer 6
 
 include ~/.i3/*.i3.conf
-

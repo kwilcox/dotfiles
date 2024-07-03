@@ -1,0 +1,193 @@
+command=~/.config/i3blocks/blocklets/$BLOCK_NAME/$BLOCK_NAME
+align=center
+separator=false
+color=#f8f8f2
+separator_block_width=30
+markup=pango
+
+[time_et]
+command=TZ=":US/Eastern" date '+%I : %M %Z' | awk '{ printf "%s<span color=\"#8be9fd\">%s</span>%s<span color=\"#8be9fd\"> %s</span>\n", $1, $2, $3, $4 }'
+interval=1
+label=<span color="#8be9fd">ET: </span>
+border=#8be9fd
+border_top=1
+border_right=0
+border_bottom=0
+border_left=0
+
+[time_pt]
+command=TZ=":US/Pacific" date '+%I : %M %Z' | awk '{ printf "%s<span color=\"#50fa7b\">%s</span>%s<span color=\"#50fa7b\"> %s</span>\n", $1, $2, $3, $4 }'
+interval=1
+label=<span color="#50fa7b">PT: </span>
+border=#50fa7b
+border_top=1
+border_right=0
+border_bottom=0
+border_left=0
+
+[time_remote]
+command=TZ=":Europe/Ljubljana" date '+%I : %M %Z' | awk '{ printf "%s<span color=\"#f1fa8c\">%s</span>%s<span color=\"#f1fa8c\"> %s</span>\n", $1, $2, $3, $4 }'
+interval=1
+label=<span color="#f1fa8c">Remote: </span>
+border=#f1fa8c
+border_top=1
+border_right=0
+border_bottom=0
+border_left=0
+
+# [docker]
+# color=#0db7ed
+# interval=10
+# LABEL=<span color="#f1fa8c">🐳</span>
+# border=#f1fa8c
+# border_top=1
+# border_right=0
+# border_bottom=0
+# border_left=0
+
+# [openvpn]
+# interval=2
+# #LABEL=<span color="#f1fa8c">VPN: </span>
+# PID_FILE_FORMAT='/run/openvpn/*.pid'
+# border=#f1fa8c
+# border_top=1
+# border_right=0
+# border_bottom=0
+# border_left=0
+
+# [rofi-calendar]
+# interval=3600
+# WEEK_START=monday
+# DATEFTM=+%a %b %d %Y
+# SHORTFMT=+%m/%d/%Y
+# #ROFI_CONFIG_FILE=~/.config/rofi/config
+# PREV_MONTH_TEXT=« prev «
+# NEXT_MONTH_TEXT=» next »
+# LEFTCLICK_PREV_MONTH=false
+# BAR_POSITION=top
+#LABEL=
+#FONT=Monospace 10
+
+# [bandwidth2]
+# interval=persist
+# LABEL=<span color="#f1fa8c">NET: </span>
+# INTERFACE=eno1
+#USE_BITS=0
+#USE_BYTES=1
+#WARN_RX=0
+#WARN_TX=0
+#CRIT_RX=0
+#CRIT_TX=0
+#USE_SI=0
+
+# [hd_root]
+# command=df -h / | awk 'FNR==2 { printf $3 "/" $2 "\n"}'
+# interval=3
+# label=<span color="#f1fa8c">/: </span>
+# border=#f1fa8c
+# border_top=1
+# border_right=0
+# border_bottom=0
+# border_left=0
+# [hd_data]
+# command=df -h /data | awk 'FNR==2 { printf $3 "/" $2 "\n"}'
+# interval=3
+# label=<span color="#50fa7b">/data: </span>
+# border=#50fa7b
+# border_top=1
+# border_right=0
+# border_bottom=0
+# border_left=0
+# [memory2]
+# label=<span color="#ff79c6">MEM: </span>
+# interval=persist
+# bar_chars=_▁▂▃▄▅▆▇█
+# bar_size=10
+# critical=80
+# warning=50
+# color_critical=#FF7373
+# color_warning=#FFA500
+# border=#ff79c6
+# border_top=1
+# border_right=0
+# border_bottom=0
+# border_left=0
+# [gpu_stats]
+# command=nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits | awk '{ printf "%02i<span color=\"#ffb86c\">%</span>", $0}' && nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits | awk '{ printf " %i<span color=\"#ffb86c\">°C</span>\n", $0}'
+# label=<span color="#ffb86c"><b>GPU: </b></span>
+# interval=4
+# border=#ffb86c
+# border_top=1
+# border_right=0
+# border_bottom=0
+# border_left=0
+# [cpu_usage]
+# interval=10
+# label=<span color="#ff5555"><b>CPU: </b></span>
+# COLOR_NORMAL=#ff5555
+# #COLOR_WARN=#FFFC00
+# #COLOR_CRIT=#FF0000
+# border=#ff5555
+# border_top=1
+# border_right=0
+# border_bottom=0
+# border_left=0
+# [disk-io]
+# command=iostat -dyz | grep nvme1n1 | awk '{print $2 " / " $3 " <span color=\"#ff5555\">kB/s</span>"}'
+# interval=5
+# label=<span color="#ff5555">IO: </span>
+# border=#ff5555
+# border_top=1
+# border_right=0
+# border_bottom=0
+# border_left=0
+#interval=5
+#instance=/^nvme.+/
+#REGEX=/^nvme.+/
+#DT=5
+#MB_ONLY=1
+#KB_ONLY=0
+#WIDTH=1
+#MB_PRECISION=1
+#KB_PRECISION=0
+#REGEX=/^(s|h)d[a-zA-Z]+/
+#THRESHOLD=0
+#WARN_COLOR="#FF0000"
+#SEPARATOR=/
+#PREFIX=
+#SUFFIX="B/s"
+
+# [volume]
+# label=<span color="#ff79c6">♪: </span>
+# interval=once
+# signal=10
+# border=#ff79c6
+# border_top=1
+# border_right=0
+# border_bottom=0
+# border_left=0
+# interval=once
+# signal=10
+# MIXER=pulse
+# SCONTROL=Master
+# STEP=2%
+#NATURAL_MAPPING=0
+
+[shutdown_menu]
+full_text=Quit
+LAUNCHER=rofi
+# ROFI_OPTIONS=-width 12 -location 3 -hide-scrollbar -bw 2
+# FONT="pangeo:JetBrains Mono 30"
+# If you are using FontAwesome, we recommend the power-off icon:
+# http://fontawesome.io/icon/power-off/
+#FG_COLOR=#bbbbbb
+#BG_COLOR=#111111
+#HLFG_COLOR=#111111
+#HLBG_COLOR=#bbbbbb
+#BORDER_COLOR=#222222
+#ROFI_TEXT=Menu:
+#ZENITY_TITLE=Menu
+#ZENITY_TEXT=Action:
+#ZENITY_OPTIONS=--column= --hide-header
+#ENABLE_CONFIRMATIONS=true (must be true or false)
+#LOCKSCRIPT=i3lock --color=${BG_COLOR#"#"}

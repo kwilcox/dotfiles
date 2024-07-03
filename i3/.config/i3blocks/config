@@ -5,35 +5,35 @@ color=#f8f8f2
 separator_block_width=30
 markup=pango
 
-[time_et]
-command=TZ=":US/Eastern" date '+%I : %M %Z' | awk '{ printf "%s<span color=\"#8be9fd\">%s</span>%s<span color=\"#8be9fd\"> %s</span>\n", $1, $2, $3, $4 }'
-interval=1
-label=<span color="#8be9fd">ET: </span>
-border=#8be9fd
-border_top=1
-border_right=0
-border_bottom=0
-border_left=0
-
-[time_pt]
-command=TZ=":US/Pacific" date '+%I : %M %Z' | awk '{ printf "%s<span color=\"#50fa7b\">%s</span>%s<span color=\"#50fa7b\"> %s</span>\n", $1, $2, $3, $4 }'
-interval=1
-label=<span color="#50fa7b">PT: </span>
-border=#50fa7b
-border_top=1
-border_right=0
-border_bottom=0
-border_left=0
-
-[time_ak]
-command=TZ=":US/Alaska" date '+%I : %M %Z' | awk '{ printf "%s<span color=\"#f1fa8c\">%s</span>%s<span color=\"#f1fa8c\"> %s</span>\n", $1, $2, $3, $4 }'
-interval=1
-label=<span color="#f1fa8c">AK: </span>
-border=#f1fa8c
-border_top=1
-border_right=0
-border_bottom=0
-border_left=0
+# [time_et]
+# command=TZ=":US/Eastern" date '+%I : %M %Z' | awk '{ printf "%s<span color=\"#8be9fd\">%s</span>%s<span color=\"#8be9fd\"> %s</span>\n", $1, $2, $3, $4 }'
+# interval=1
+# label=<span color="#8be9fd">ET: </span>
+# border=#8be9fd
+# border_top=1
+# border_right=0
+# border_bottom=0
+# border_left=0
+#
+# [time_pt]
+# command=TZ=":US/Pacific" date '+%I : %M %Z' | awk '{ printf "%s<span color=\"#50fa7b\">%s</span>%s<span color=\"#50fa7b\"> %s</span>\n", $1, $2, $3, $4 }'
+# interval=1
+# label=<span color="#50fa7b">PT: </span>
+# border=#50fa7b
+# border_top=1
+# border_right=0
+# border_bottom=0
+# border_left=0
+#
+# [time_remote]
+# command=TZ=":Europe/Ljubljana" date '+%I : %M %Z' | awk '{ printf "%s<span color=\"#f1fa8c\">%s</span>%s<span color=\"#f1fa8c\"> %s</span>\n", $1, $2, $3, $4 }'
+# interval=1
+# label=<span color="#f1fa8c">Remote: </span>
+# border=#f1fa8c
+# border_top=1
+# border_right=0
+# border_bottom=0
+# border_left=0
 
 [docker]
 color=#0db7ed
@@ -45,15 +45,15 @@ border_right=0
 border_bottom=0
 border_left=0
 
-[openvpn]
-interval=2
-#LABEL=<span color="#f1fa8c">VPN: </span>
-PID_FILE_FORMAT='/run/openvpn/*.pid'
-border=#f1fa8c
-border_top=1
-border_right=0
-border_bottom=0
-border_left=0
+#[openvpn]
+# interval=2
+# #LABEL=<span color="#f1fa8c">VPN: </span>
+# PID_FILE_FORMAT='/run/openvpn/*.pid'
+# border=#f1fa8c
+# border_top=1
+# border_right=0
+# border_bottom=0
+# border_left=0
 
 [rofi-calendar]
 interval=3600
@@ -178,9 +178,9 @@ SCONTROL=Master
 STEP=2%
 #NATURAL_MAPPING=0
 
-[shutdown_menu]
-full_text=Quit
-LAUNCHER=rofi
+# [shutdown_menu]
+# full_text=Quit
+# LAUNCHER=rofi
 # If you are using FontAwesome, we recommend the power-off icon:
 # http://fontawesome.io/icon/power-off/
 #FG_COLOR=#bbbbbb
