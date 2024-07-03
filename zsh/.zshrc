@@ -76,7 +76,12 @@ export TERM="xterm-256color"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# https://martinheinz.dev/blog/110
+HISTFILE="$HOME/.zsh_history"
 HIST_STAMPS="yyyy-mm-dd"
+HISTSIZE=10000000
+SAVEHIST=10000000
+HISTORY_IGNORE="(ls|pwd|exit)*"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
