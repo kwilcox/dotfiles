@@ -12,6 +12,8 @@ CONDA_ENV_DISABLE_PROMPT=false
 BULLETTRAIN_CONTEXT_DEFAULT_USER=kwilcox
 BULLETTRAIN_CUSTOM_MSG="$(hostname)"
 BULLETTRAIN_PROMPT_CHAR=" \uE0B0"
+# https://github.com/ohmyzsh/ohmyzsh/issues/12328
+BULLETTRAIN_GIT_PROMPT_CMD="\$(_omz_git_prompt_info)"
 BULLETTRAIN_PROMPT_ORDER=(
   custom
   status
@@ -94,6 +96,7 @@ export DISABLE_VENV_CD=1
 plugins=(
   git
   tmux
+  fzf
   #autopep8
   #conda
   #docker
